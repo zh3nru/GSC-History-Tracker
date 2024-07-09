@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/txt_Title"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/logo"
+        android:elevation="10dp"/>
+
+    <EditText
+        android:id="@+id/search_View"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="39dp"
+        android:layout_toRightOf="@id/txt_Title"
+        android:drawableLeft="@drawable/baseline_search_24"
+        android:background="@drawable/search"
+        android:elevation="10dp"
+        android:paddingLeft="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="350dp"
+        android:layout_height="140dp"
+        android:layout_below="@id/txt_Title"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bgshape"
+        android:layout_marginTop="20dp"
+        android:elevation="50dp">
+
+        <TextView
+            android:id="@+id/txt_Category"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="Categories"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_Category"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/txt_Category"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape"
+            android:layout_marginTop="10dp">
+
+
+            <ImageView
+                android:id="@+id/Events"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/events" />
+
+
+            <ImageView
+                android:id="@+id/Health"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/Events"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/heatlh" />
+
+
+            <ImageView
+                android:id="@+id/Politics"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/Health"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:src="@drawable/politics" />
+
+
+            <ImageView
+                android:id="@+id/Sports"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:layout_toRightOf="@id/Politics"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/sports" />
+
+            <TextView
+                android:id="@+id/txt_Events"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Events"
+                android:layout_marginLeft="22dp"
+                android:text="Events"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txt_Health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Health"
+                android:layout_marginLeft="110dp"
+                android:text="Health"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txt_Politics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Politics"
+                android:layout_marginLeft="195dp"
+                android:text="Politics"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txt_Sports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Politics"
+                android:layout_marginLeft="270dp"
+                android:text="Sports" android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_Highlights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/rl"
+        android:layout_marginLeft="35dp"
+        android:text="Highlights"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/sort"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rl"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="35dp"/>
+
+
+    <ScrollView
+        android:id="@+id/layout_Scroll"
+        android:layout_width="350dp"
+        android:layout_height="700dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bgshape"
+        android:layout_below="@+id/txt_Highlights"
+        android:elevation="50dp"
+        android:paddingTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/highlight_1"
+                android:layout_width="330dp"
+                android:layout_height="250dp"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="11dp"
+                app:cardUseCompatPadding="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/highlight_2"
+                android:layout_width="330dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/highlight_1"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="11dp"
+                app:cardUseCompatPadding="true"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/highlight_3"
+                android:layout_width="330dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/highlight_2"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="11dp"
+                app:cardUseCompatPadding="true"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/highlight_4"
+                android:layout_width="330dp"
+                android:layout_height="250dp"
+                android:layout_below="@id/highlight_3"
+                app:cardElevation="11dp"
+                app:cardCornerRadius="11dp"
+                app:cardUseCompatPadding="true"
+                android:layout_centerHorizontal="true" />
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
